@@ -1,0 +1,27 @@
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "CD:22:3D:E3:CE:30",
+        "port": 51826,
+        "pin": "123-45-678"
+    },
+    "accessories": [
+    ],
+
+    "platforms": [{
+            "platform" : "WiringPiPlatform",
+            "name" : "Fireplace",
+            "overrideCache" : "true",
+            "autoExport" : "true",
+            "gpiopins" : [{
+                "name" : "GPIO0",
+                "pin"  : 17,
+                "enabled" : "true",
+                "mode" : "out",
+                "pull" : "down",
+                "inverted" : "true",
+                "duration" : 0,
+                "polling" : "true"
+            }]
+    }]
+}
